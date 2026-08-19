@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KAVI KILLER | Horror Game Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<!-- Background particles -->
+<div id="particles"></div>
+
+<!-- Fog -->
+<div class="fog"></div>
+
+<!-- Navigation -->
+<header>
+
+    <div class="logo">
+        KAVI <span>KILLER</span>
+    </div>
+
+    <nav id="navMenu">
+        <a href="#home">HOME</a>
+        <a href="#games">GAMES</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#trailer">TRAILER</a>
+        <button onclick="openContact()">CONTACT</button>
+    </nav>
+
+    <button class="menuButton" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="heroContent">
+
+        <div class="smallTitle">KAVI KILLER STUDIO</div>
+
+        <h1>KAVI <span>KILLER</span></h1>
+
+        <p class="tagline">
+            GAME DEVELOPMENT STUDIO
+        </p>
+
+        <p class="testingText">
+            Welcome to the official Kavi Killer Studio website.
+            Our website is currently under testing and development.
+            Some features, pages, games, videos, music, and interactive
+            elements may not work perfectly yet. We are working hard
+            to improve everything and create a better experience for
+            everyone. Thank you for your patience and support.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- TRAILER -->
+<section id="trailer" class="section">
+
+    <p class="sectionSmall">THE NIGHTMARE BEGINS</p>
+
+    <h2>HORROR <span>TRAILER</span></h2>
+
+    <div class="videoBox">
+
+        <video controls poster="assets/game1.jpg">
+
+            <source src="assets/trailer.mp4" type="video/mp4">
+
+            Your browser does not support video.
+
+        </video>
+
+        <div class="videoFallback">
+            TRAILER COMING SOON
+        </div>
+
+        <div class="videoOverlay">
+            KAVI KILLER
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GAMES -->
+<section id="games" class="section gamesSection">
+
+    <p class="sectionSmall">OUR NIGHTMARES</p>
+
+    <h2>OUR <span>GAMES</span></h2>
+
+    <div class="gameCards">
+
+        <div class="gameCard">
+
+            <img src="assets/game1.jpg">
+
+            <div class="gameInfo">
+
+                <h3>THE HAUNTED SCHOOL</h3>
+
+                <p>
+                    Enter the abandoned school.
+                    Survive the darkness.
+                </p>
+
+                <div class="downloads">
+
+                    <a href="assets/android.apk"
+                       download
+                       class="download android">
+                        📱 ANDROID
+                    </a>
+
+                    <a href="assets/game-pc.zip"
+                       download
+                       class="download pc">
+                        💻 PC
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="gameCard">
+
+            <img src="assets/game2.jpg">
+
+            <div class="gameInfo">
+
+                <h3>THE LAST NIGHT</h3>
+
+                <p>
+                    Something is watching you.
+                </p>
+
+                <div class="downloads">
+
+                    <a href="assets/android.apk"
+                       download
+                       class="download android">
+                        📱 ANDROID
+                    </a>
+
+                    <a href="assets/game-pc.zip"
+                       download
+                       class="download pc">
+                        💻 PC
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+
+    <p class="sectionSmall">ENTER THE WORLD</p>
+
+    <h2>GAME <span>GALLERY</span></h2>
+
+    <div class="gallery">
+
+        <img src="assets/game1.jpg" onclick="openImage(this.src)">
+        <img src="assets/game2.jpg" onclick="openImage(this.src)">
+        <img src="assets/game3.jpg" onclick="openImage(this.src)">
+        <img src="assets/game4.jpg" onclick="openImage(this.src)">
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about section">
+
+    <p class="sectionSmall">WHO WE ARE</p>
+
+    <h2>KAVI <span>KILLER</span></h2>
+
+    <p class="aboutText">
+
+        KAVI KILLER is an independent game studio
+        focused on creating terrifying horror experiences,
+        atmospheric worlds and unforgettable nightmares.
+
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+<div id="contactModal" class="modal">
+
+    <div class="contactBox">
+
+        <button class="close" onclick="closeContact()">×</button>
+
+        <p class="sectionSmall">GET IN TOUCH</p>
+
+        <h2>CONTACT <span>US</span></h2>
+
+        <div class="contactItem">
+            📧
+            <div>
+                <small>EMAIL</small>
+                <a href="mailto:mcstudio2307@email.com">
+                    mcstudio2307@email.com
+                </a>
+            </div>
+        </div>
+
+        <div class="contactItem">
+            📱
+            <div>
+                <small>PHONE</small>
+                <a href="tel:+919342064593">
+                    +91 9342064593
+                </a>
+            </div>
+        </div>
+
+        <div class="contactItem">
+            🎮
+            <div>
+                <small>STUDIO</small>
+                <p>KAVI KILLER GAME STUDIO</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Image viewer -->
+<div id="imageViewer" class="imageViewer" onclick="closeImage()">
+
+    <span>×</span>
+
+    <img id="largeImage">
+
+</div>
+
+
+<!-- MUSIC -->
+<audio id="horrorMusic" loop>
+    <source src="assets/horror-music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("click", function startMusic() {
+    const music = document.getElementById("horrorMusic");
+
+    music.play();
+
+    document.removeEventListener("click", startMusic);
+}, { once: true });
+</script>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footerLogo">
+        KAVI KILLER
+    </div>
+
+    <p>
+        © 2026 KAVI KILLER. ALL RIGHTS RESERVED.
+    </p>
+
+    <button onclick="openContact()">
+        CONTACT STUDIO
+    </button>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+<section class="rating-section" id="rating">
+    <div class="rating-box">
+        <h2>RATE MC STUDIO</h2>
+        <p class="rating-subtitle">How would you rate your experience?</p>
+
+        <div class="stars" id="stars">
+            <button class="star" data-rating="1">★</button>
+            <button class="star" data-rating="2">★</button>
+            <button class="star" data-rating="3">★</button>
+            <button class="star" data-rating="4">★</button>
+            <button class="star" data-rating="5">★</button>
+        </div>
+
+        <p id="ratingText">Select a rating</p>
+
+        <button class="submit-rating" id="submitRating">
+            SUBMIT RATING
+        </button>
+
+        <div class="rating-result">
+            <strong id="averageRating">0.0</strong>
+            <span>/ 5</span>
+            <p><span id="ratingCount">0</span> ratings</p>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
