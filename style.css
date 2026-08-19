@@ -984,4 +984,146 @@ footer button {
 
     letter-spacing: .5px;
 }
+/* ================================
+   KAVI KILLER - HORROR ATMOSPHERE
+   ================================ */
+
+.horror-atmosphere {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* FOG */
+.fog-layer {
+    position: absolute;
+    width: 220%;
+    height: 100%;
+    left: -60%;
+    top: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 20% 60%,
+            rgba(255,255,255,0.14),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 70% 45%,
+            rgba(190,190,190,0.10),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 45% 80%,
+            rgba(255,255,255,0.08),
+            transparent 35%
+        );
+
+    filter: blur(30px);
+    opacity: 0.65;
+}
+
+.fog-1 {
+    animation: horrorFog1 28s ease-in-out infinite alternate;
+}
+
+.fog-2 {
+    opacity: 0.4;
+    transform: scale(1.2);
+    animation: horrorFog2 40s ease-in-out infinite alternate;
+}
+
+@keyframes horrorFog1 {
+    0% {
+        transform: translateX(-8%) scale(1);
+    }
+
+    50% {
+        transform: translateX(12%) scale(1.15);
+    }
+
+    100% {
+        transform: translateX(-5%) scale(1.05);
+    }
+}
+
+@keyframes horrorFog2 {
+    0% {
+        transform: translateX(15%) scale(1.2);
+    }
+
+    50% {
+        transform: translateX(-15%) scale(1.35);
+    }
+
+    100% {
+        transform: translateX(5%) scale(1.15);
+    }
+}
+
+/* DARK EDGES */
+.dark-vignette {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(0,0,0,0.35) 65%,
+            rgba(0,0,0,0.85) 100%
+        );
+}
+
+/* LIGHTNING */
+.lightning-flash {
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    mix-blend-mode: screen;
+
+    animation: lightning 9s infinite;
+}
+
+@keyframes lightning {
+
+    0%, 91%, 94%, 100% {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0.75;
+    }
+
+    92.5% {
+        opacity: 0.05;
+    }
+
+    93% {
+        opacity: 0.9;
+    }
+
+    93.4% {
+        opacity: 0;
+    }
+}
+
+/* KEEP WEBSITE CONTENT ABOVE EFFECT */
+header,
+main,
+section,
+footer,
+.container,
+.hero,
+.content {
+    position: relative;
+    z-index: 10;
+}
+video {
+    position: relative;
+    z-index: 10;
+}
 }
